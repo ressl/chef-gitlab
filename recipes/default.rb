@@ -4,22 +4,26 @@
 #
 # Copyright (c) 2016 Robert Ressl, All Rights Reserved.
 
-include_recipe 'build-essential::default'
+gitlab_user 'testmich' do
+  action :delete
+  email 'testmich@safematix.com'
+  password 'setup123'
+end
 
-chef_gem 'rest-client'
-chef_gem 'json'
+gitlab_user 'test' do
+  action :delete
+  email 'test@safematix.com'
+  password 'setup123'
+end
 
-require 'rest-client'
-require 'json'
+gitlab_user 'test2' do
+  action :delete
+  email 'test2@safematix.com'
+  password 'setup123'
+end
 
-test = RestClient.get 'https://git.safematix.com/api/v3/projects', {:'PRIVATE-TOKEN' => 'RyPjAFMV3hJs9wZdBbbe'}
-
-template '/tmp/test_rest' do
-  source 'test.erb'
-  owner 'root'
-  group 'root'
-  mode '0600'
-  variables(
-    rest: test
-  )
+gitlab_user 'testmich_neu' do
+  action :delete
+  email 'testmich_neu@safematix.com'
+  password 'setup123'
 end
