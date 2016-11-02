@@ -4,7 +4,7 @@ property :instance_name, String, name_property: true
 property :email, String, default: 'email@example.com'
 property :password, String, default: 'setup123'
 property :url, String, default: 'https://git.safematix.com/api/v3/users'
-property :token, String, default: 'RyPjAFMV3hJs9wZdBbbe'
+property :token, String, default: 'blablabla'
 
 action :create do
   chef_gem 'rest-client'

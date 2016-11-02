@@ -1,6 +1,6 @@
 name 'gitlab'
 maintainer 'Robert Ressl'
-maintainer_email 'robert.ressl@swisscom.com'
+maintainer_email 'r.ressl@safematix.com'
 license 'all_rights'
 description 'Installs/Configures gitlab'
 long_description 'Installs/Configures gitlab'
